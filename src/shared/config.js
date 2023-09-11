@@ -1,4 +1,6 @@
 export const colors = {
+  navActiveBtnBackground: "#FFDB21",
+  navButtonText: "#013B5A",
 };
   
 export const fonts = {

@@ -11,6 +11,8 @@ import { mediaQueries } from "./shared/config";
 import SectionHeader from "./components/SectionHeader";
 import About from "./components/About";
 import ArticleGrid from "./components/ArticleGrid";
+import NavBar from "./components/NavBar";
+import NavButton from "./components/NavButton";
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -34,6 +36,7 @@ function App() {
   return data && (
     <div className="App">
       <Header/>
+      <NavBar/>
       <Container>
         <Landing image={data.landing_image} credits={data.landing_credits}/>
         <Blurb blurb={data.description_text}/>
