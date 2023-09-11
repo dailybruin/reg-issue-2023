@@ -19,8 +19,6 @@ const OuterContainer = styled.button`
     min-height: 20px;
     max-height: 60px;
     box-shadow: 2px 2px 2px 0px #00000040;
-    margin-left: 5px;
-    margin-right: 5px;
     background: ${props => props.highlight ? colors.navActiveBtnBackground : colors.navBtnBackground};
     border: none;
     padding-left: 4px;
