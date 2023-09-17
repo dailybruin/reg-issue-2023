@@ -11,7 +11,8 @@ const OuterContainer = styled.div`
 `;
 const Grid = styled.div`
     height: fit-content;
-    width: 100vw;
+    width: 85vw;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 `;
