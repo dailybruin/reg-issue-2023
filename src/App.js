@@ -11,8 +11,12 @@ import { mediaQueries } from "./shared/config";
 import SectionHeader from "./components/SectionHeader";
 import About from "./components/About";
 import ArticleGrid from "./components/ArticleGrid";
-import NavBar from "./components/NavBar";
-import NavButton from "./components/NavButton";
+import NavBar from "./components/NavHeader/NavBar";
+import NavButton from "./components/NavHeader/NavButton";
+import NavHeader from "./components/NavHeader";
+import { HashRouter } from 'react-router-dom';
+
+
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -35,8 +39,9 @@ function App() {
 
   return data && (
     <div className="App">
+      <HashRouter>
       <Header/>
-      <NavBar/>
+      <NavHeader/>
       <Container>
         <Landing image={data.landing_image} credits={data.landing_credits}/>
         <Blurb blurb={data.description_text}/>
@@ -77,7 +82,9 @@ function App() {
         </div>
         <Footer/>
       </Container>
+      </HashRouter>
     </div>
+    
   );
 }
 

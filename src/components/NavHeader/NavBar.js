@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import NavButton from './NavButton';
-import { mediaQueries } from '../shared/config';
+import { mediaQueries } from '../../shared/config';
 
 /* This should always be on top (z-index) */
 const NavbarContainer = styled.div`

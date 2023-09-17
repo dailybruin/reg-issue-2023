@@ -2,18 +2,25 @@ import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { mediaQueries, colors } from "../shared/config";
-import BEAR from "../images/BEAR.png";
+
+import { mediaQueries, colors } from "../../shared/config";
+import BEAR from "../../images/BEAR.png";
 
 
 const BearContainer = styled.button`
     border: none;
     background: none;
     margin-top: -20px;
+    
 `
 const Bear = styled.img`
     opacity: ${props => props.highlight ? 1 : 0};
     margin: auto;
+  
+    ${mediaQueries.tablet} {
+      max-height: 20px;
+      opacity: 0;
+    }
 `
 const OuterContainer = styled.button`
     min-height: 20px;
@@ -23,6 +30,21 @@ const OuterContainer = styled.button`
     border: none;
     padding-left: 4px;
     padding-right 4px;
+
+    ${mediaQueries.notTablet} {
+      border-left: ${props => props.index === 0 ? 1:0};
+      transition: 0.3s;
+      &:hover {
+        background: 'black';
+      }
+    }
+    ${mediaQueries.tablet} {
+      &:active {
+        background: ${colors.navButtonHover};
+      }
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
 
 
 `
@@ -36,6 +58,10 @@ const InnerContainer = styled.button`
     padding-left: 4px;
     padding-right: 4px;
 
+    ${mediaQueries.tablet} {
+      padding-right: -5px;
+    }
+
 `
 
 const StyledButton = styled.button`
@@ -45,22 +71,6 @@ const StyledButton = styled.button`
   margin-top: 2px;
   margin-bottom: 2px;
   background: ${props => props.color};
-
-
-  ${mediaQueries.notTablet} {
-    border-left: ${props => props.index === 0 ? 1:0};
-    transition: 0.3s;
-    &:hover {
-      background: ${colors.navButtonHover};
-    }
-  }
-  ${mediaQueries.tablet} {
-    &:active {
-      background: ${colors.navButtonHover};
-    }
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
 
 
   color: white;
