@@ -11,6 +11,7 @@ import { mediaQueries } from "./shared/config";
 import SectionHeader from "./components/SectionHeader";
 import About from "./components/About";
 import ArticleGrid from "./components/ArticleGrid";
+import Staff from "./components/Staff";
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -41,7 +42,7 @@ function App() {
           <SectionHeader text="INTERACTIVE"></SectionHeader>
         </div>
         <div id="NEWS">
-          <SectionHeader text="NEWS"></SectionHeader>
+          <SectionHeader text="NEWS"></SectionHeader> 
           <ArticleGrid articles={data.news}></ArticleGrid>
         </div>
         <div id="SPORTS">
@@ -72,6 +73,7 @@ function App() {
           <SectionHeader text="ABOUT"></SectionHeader>
           <About></About>
         </div>
+        <Staff staff={data.staff}/>
         <Footer/>
       </Container>
     </div>

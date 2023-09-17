@@ -32,7 +32,7 @@ export default function ImageCard(props){
         position: relative;
         width: 100%;
         height: fit-content;
-        min-height: 600px;
+        min-height: 480px;
         margin: auto;
         background-color: #C0DCCF;
         color: black;
