@@ -10,6 +10,9 @@ const OuterContainer = styled.div`
     position: relative;
     padding: 5em;
 
+    ${mediaQueries.mobile} {
+        padding: 2em;
+    }
 `;
 const Grid = styled.div`
     height: fit-content;

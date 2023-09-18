@@ -15,6 +15,7 @@ const Item = styled.div`
   
   ${mediaQueries.mobile} {
     font-size: 14px;
+    margin-bottom: 1em;
   }
 `;
 

@@ -8,6 +8,8 @@ const Header = styled.div`
     font-size: 36px;
     font-weight: 600;
     color: white;
+    margin-top: 3em;
+    margin-bottom: 2em;
 
     ${mediaQueries.mobile} {
         font-size: 32px;
@@ -34,11 +36,14 @@ const Grid = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
+
+    ${mediaQueries.mobile} {
+        grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 
 export default function Staff(props) {
-    console.log("ok");
     console.log(props.staff);
     return (
         <>

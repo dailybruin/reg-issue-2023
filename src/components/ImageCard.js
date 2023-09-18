@@ -42,7 +42,7 @@ export default function ImageCard(props){
         position: relative;
         width: 100%;
         height: fit-content;
-        min-height: 480px;
+        min-height: 450px;
         margin: auto;
         background-color: #C0DCCF;
         color: black;
@@ -69,6 +69,10 @@ export default function ImageCard(props){
         border-top: 2.5px solid black;
         margin: auto;
         padding-top: 27%;
+
+        ${mediaQueries.mobile} {
+            padding-top: 0%;
+        }
     `;
 
     const images = [

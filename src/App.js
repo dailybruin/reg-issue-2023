@@ -16,6 +16,7 @@ import NavButton from "./components/NavHeader/NavButton";
 import NavHeader from "./components/NavHeader";
 import { HashRouter } from 'react-router-dom';
 import Staff from "./components/Staff";
+import Interactive from "./components/Interactive";
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -46,6 +47,7 @@ function App() {
         <Blurb blurb={data.description_text}/>
         <div id="INTERACTIVE">
           <SectionHeader text="INTERACTIVE"></SectionHeader>
+          <Interactive/>
         </div>
         <div id="NEWS">
           <SectionHeader text="NEWS"></SectionHeader> 
