@@ -32,7 +32,7 @@ export default function ArticleCard(props){
         position: relative;
         width: 100%;
         height: fit-content;
-        min-height: 500px;
+        min-height: 480px;
         margin: auto;
         background-color: #C0DCCF;
         color: black;
@@ -72,6 +72,7 @@ export default function ArticleCard(props){
 
         ${mediaQueries.mobile} {
             font-size: 12px;
+            padding: 1em;
         }
 
       `;
@@ -86,7 +87,8 @@ export default function ArticleCard(props){
         font-family: 'Reem Kufi Ink', sans-serif;
 
         ${mediaQueries.mobile} {
-            font-size: 12px;
+            font-size: 16px;
+            margin-top: 1em;
         }
     `;
 

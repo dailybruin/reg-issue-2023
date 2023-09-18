@@ -15,8 +15,7 @@ import NavBar from "./components/NavHeader/NavBar";
 import NavButton from "./components/NavHeader/NavButton";
 import NavHeader from "./components/NavHeader";
 import { HashRouter } from 'react-router-dom';
-
-
+import Staff from "./components/Staff";
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -49,7 +48,7 @@ function App() {
           <SectionHeader text="INTERACTIVE"></SectionHeader>
         </div>
         <div id="NEWS">
-          <SectionHeader text="NEWS"></SectionHeader>
+          <SectionHeader text="NEWS"></SectionHeader> 
           <ArticleGrid articles={data.news}></ArticleGrid>
         </div>
         <div id="SPORTS">
@@ -80,6 +79,7 @@ function App() {
           <SectionHeader text="ABOUT"></SectionHeader>
           <About></About>
         </div>
+        <Staff staff={data.staff}/>
         <Footer/>
       </Container>
       </HashRouter>

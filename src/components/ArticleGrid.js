@@ -7,7 +7,8 @@ import blue1 from "../images/blue1.svg";
 const OuterContainer = styled.div`
     max-width: 100vw;
     position: relative;
-    margin-top: 1em;
+    padding: 5em;
+
 `;
 const Grid = styled.div`
     height: fit-content;
@@ -15,11 +16,16 @@ const Grid = styled.div`
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
+    ${mediaQueries.mobile} {
+        grid-template-columns: repeat(1, 1fr); 
+    }
 `;
 
 const EmptyPlaceHolder = styled.div`
 
 `;
+
 export default function ArticleGrid(props) {
     console.log("bruh");
     console.log(props.articles);
