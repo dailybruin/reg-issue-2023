@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import { mediaQueries } from '../shared/config';
 
+import blue1 from "../images/blue1.svg";
+import blue2 from "../images/blue2.png";
+import green1 from "../images/green1.png"
+import green2 from "../images/green2.png"
+import yellow1 from "../images/yellow1.png"
+import yellow2 from "../images/yellow2.png"
+import red1 from "../images/red1.png"
+import purple1 from "../images/purple1.png"
+import magenta1 from "../images/magenta1.png"
+import magenta2 from "../images/magenta2.png"
 
 function getBarColor(color){
     if (color == "blue") {
@@ -56,16 +66,30 @@ export default function ImageCard(props){
         width: 100%;
         display: block;
         object-fit: scale-down;
-        border-bottom: 2.5px solid black;
-        border-top: 2.5px solid black
+        border-top: 2.5px solid black;
+        margin: auto;
+        padding-top: 27%;
     `;
+
+    const images = [
+        blue1,
+        blue2,
+        green1,
+        green2,
+        yellow1,
+        yellow2,
+        red1,
+        purple1,
+        magenta1,
+        magenta2
+    ]
 
     return(
         <div>
             {props.article_title != 'blank' &&
                 <OuterContainer>
                     <Bar/>
-                    <Image src={props.article_image}></Image>
+                    <Image src={images[props.index]}></Image>
                 </OuterContainer>
             }
         </div>
