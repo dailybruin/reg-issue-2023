@@ -3,6 +3,7 @@ import { mediaQueries } from '../shared/config';
 import ArticleCard from "./ArticleCard";
 import ImageCard from './ImageCard';
 import blue1 from "../images/blue1.svg";
+import blue2 from "../images/blue2.png";
 
 const OuterContainer = styled.div`
     max-width: 100vw;
@@ -39,7 +40,7 @@ export default function ArticleGrid(props) {
                         else if (item.article_title.includes('*')) {
                             return (
                                 <ImageCard
-                                article_image={blue1}
+                                index={item.article_byline}
                                 color = {item.color}
                                 />
                             )
