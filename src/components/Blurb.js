@@ -46,7 +46,27 @@ const TextBottom = styled.div`
 export default function Blurb(props) {
     return (
       <BlurbContainer>
-        <Text>{props.blurb}</Text>
+        <Text>
+            Dear Bruins,
+            <br></br>
+            <br></br>
+            Welcome back to campus, and welcome to the Daily Bruin’s 2023 Registration Issue! We couldn’t be more ecstatic for the school year to begin.
+            <br></br>
+            <br></br>
+            Each year, The Bruin’s Registration Issue boasts a range of stories and multimedia projects to help both new and returning Bruins get acquainted with what’s ahead for the coming year. This time, we’re exploring Chancellor Gene Block’s final year in the role, transportation on UCLA campus, the state of women’s athletics and more. We hope each of these pieces provides insight into our school and how we can make it a better place for all.
+            <br></br>
+            <br></br>
+            If telling the stories of the UCLA community through journalism – whether it be written, audio, visual or something else – sounds as cool to you as it does to us, please consider applying to join the Daily Bruin! Our team of reporters, editors, artists, software engineers and more would love to have you. Applications can be found on  
+            <a href="https://apply.uclastudentmedia.com/" style={{ margin: '0 5px', color: "white"}}>
+                    apply.uclastudentmedia.com
+            </a>
+            and are due Oct. 9 at noon.
+            <br></br>
+            <br></br>
+            We are wishing you a wonderful year at UCLA. Whether it’s your first, last or somewhere in between, we hope you make the most of it.
+            <br></br>
+            <br></br>
+        </Text>
         <TextBottom>
             Sincerely,
             <br></br>
