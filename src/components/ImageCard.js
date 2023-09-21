@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { mediaQueries } from '../shared/config';
 
-import blue1 from "../images/blue1.svg";
+import blue1 from "../images/blue1.png";
 import blue2 from "../images/blue2.png";
 import green1 from "../images/green1.png"
 import green2 from "../images/green2.png"
@@ -11,6 +11,8 @@ import red1 from "../images/red1.png"
 import purple1 from "../images/purple1.png"
 import magenta1 from "../images/magenta1.png"
 import magenta2 from "../images/magenta2.png"
+import black1 from "../images/black1.png"
+import red2 from "../images/red2.png"
 
 function getBarColor(color){
     if (color == "blue") {
@@ -42,7 +44,7 @@ export default function ImageCard(props){
         position: relative;
         width: 100%;
         height: fit-content;
-        min-height: 450px;
+        min-height: 480px;
         margin: auto;
         background-color: #C0DCCF;
         color: black;
@@ -52,12 +54,15 @@ export default function ImageCard(props){
         a {
             text-decoration: none;
         }
+
+        
     `;
 
     const Bar = styled.div`
         height: 15px;
         background-color: #${getBarColor(props.color)};
         width: 100%;
+        border-bottom: 3px solid black;
     `;
 
 
@@ -66,13 +71,22 @@ export default function ImageCard(props){
         width: 100%;
         display: block;
         object-fit: scale-down;
-        border-top: 2.5px solid black;
-        margin: auto;
-        padding-top: 27%;
+        vertical-align: middle;
 
         ${mediaQueries.mobile} {
             padding-top: 0%;
         }
+
+    `;
+
+    const ImageBox = styled.div`
+        height: 95%;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
     `;
 
     const images = [
@@ -85,7 +99,9 @@ export default function ImageCard(props){
         red1,
         purple1,
         magenta1,
-        magenta2
+        magenta2,
+        black1,
+        red2
     ]
 
     return(
@@ -93,7 +109,10 @@ export default function ImageCard(props){
             {props.article_title != 'blank' &&
                 <OuterContainer>
                     <Bar/>
+                    <ImageBox>
                     <Image src={images[props.index]}></Image>
+                    </ImageBox>
+                    
                 </OuterContainer>
             }
         </div>

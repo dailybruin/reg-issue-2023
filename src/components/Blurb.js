@@ -8,6 +8,11 @@ const BlurbContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     padding: 7em;
+
+    ${mediaQueries.mobile} {
+        padding-top: 0em;
+    }
+
 `;
 
 const Text = styled.div`
@@ -17,12 +22,11 @@ const Text = styled.div`
     color:  white;
 
     width: 50vw;
-    text-align: center;
+    text-align: left;
     padding: 2em;
     margin: 3em auto 1em auto;
 
     ${mediaQueries.mobile} {
-        padding: 0;
         margin: 3em 0;
         width: 70vw;
     }
@@ -57,10 +61,9 @@ export default function Blurb(props) {
             <br></br>
             <br></br>
             If telling the stories of the UCLA community through journalism – whether it be written, audio, visual or something else – sounds as cool to you as it does to us, please consider applying to join the Daily Bruin! Our team of reporters, editors, artists, software engineers and more would love to have you. Applications can be found on  
-            <a href="https://apply.uclastudentmedia.com/" style={{ margin: '0 5px', color: "white"}}>
+            <a href="https://apply.uclastudentmedia.com/" style={{ margin: '0 5px', color: "white"}} target="_blank">
                     apply.uclastudentmedia.com
-            </a>
-            and are due Oct. 9 at noon.
+            </a> and are due Oct. 9 at noon.
             <br></br>
             <br></br>
             We are wishing you a wonderful year at UCLA. Whether it’s your first, last or somewhere in between, we hope you make the most of it.
@@ -72,17 +75,17 @@ export default function Blurb(props) {
             <br></br>
             Isabelle Friedman  
             <span style={{color: 'yellow'}}>
-            •   Editor in chief
+            &nbsp;•   Editor in chief
             </span> 
             <br></br>
             Abigail Siatkowski
             <span style={{color: 'yellow'}}>
-            •   Managing editor
+            &nbsp;•   Managing editor
             </span> 
             <br></br>
             Emily Tang
             <span style={{color: 'yellow'}}>
-            •   Digital managing editor
+            &nbsp;•   Digital managing editor
             </span>  
         </TextBottom>
       </BlurbContainer>

@@ -18,7 +18,7 @@ const Oval = styled.div`
     height: 200px;
 
     ${mediaQueries.mobile} {
-        width: 70vw;
+        width: 80vw;
     }
 `;
 

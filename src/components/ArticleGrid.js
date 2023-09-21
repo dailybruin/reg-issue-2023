@@ -2,8 +2,7 @@ import styled from 'styled-components';
 import { mediaQueries } from '../shared/config';
 import ArticleCard from "./ArticleCard";
 import ImageCard from './ImageCard';
-import blue1 from "../images/blue1.svg";
-import blue2 from "../images/blue2.png";
+import EmptyCard from "./EmptyCard";
 
 const OuterContainer = styled.div`
     max-width: 100vw;
@@ -41,6 +40,12 @@ export default function ArticleGrid(props) {
                         if (!item.article_title) {
                             // If article_title is empty, return empty space
                             return <EmptyPlaceHolder/>;
+                        }
+                        else if (item.article_title.includes('#')){
+                            return(
+                                <EmptyCard color = {item.color}>h</EmptyCard>
+                            )
+                            
                         }
                         else if (item.article_title.includes('*')) {
                             return (

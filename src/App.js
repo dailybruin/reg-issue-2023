@@ -34,6 +34,7 @@ function App() {
 
     ${mediaQueries.mobile} {
       background-image: url(${mobileBackgroud});
+      background-size: contain;
     }
   `;
 

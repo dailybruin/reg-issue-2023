@@ -52,7 +52,7 @@ export default function ArticleCard(props){
 
 
     const Image = styled.img`
-        height: 60%;
+        height: 40%;
         width: 100%;
         display: block;
         object-fit: scale-down;
