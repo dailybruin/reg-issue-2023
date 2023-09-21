@@ -80,7 +80,7 @@ export default function ImageCard(props){
     `;
 
     const ImageBox = styled.div`
-        height: 95%;
+        height: 98%;
         top: 0;
         width: 100%;
         display: flex;

@@ -82,7 +82,7 @@ function App() {
           <SectionHeader text="ABOUT"></SectionHeader>
           <About></About>
         </div>
-        <Staff staff={data.staff}/>
+        <Staff staff={data.staff} staff_bottom={data.staff_bottom}/>
         <Footer/>
       </Container>
       </HashRouter>

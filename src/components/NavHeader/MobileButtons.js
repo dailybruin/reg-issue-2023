@@ -5,7 +5,8 @@ import styled from 'styled-components'
 
 import menu from '../../images/menu.png'
 import vert_menu from '../../images/vert-menu.png'
-import { colors } from '../../shared/config'
+import { colors, mediaQueries} from '../../shared/config'
+
 
 const SquareButton = styled.button`
   width: 31px;
@@ -16,6 +17,11 @@ const SquareButton = styled.button`
   box-sizing: border-box;
   margin-left: -8px;
   margin-top: -1px;
+
+  ${mediaQueries.mobile} {
+    margin-left: 0px;
+  margin-top: 0px;
+}
 
   text-align: center;
   font-family: Karla;

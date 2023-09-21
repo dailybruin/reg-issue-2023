@@ -42,6 +42,34 @@ const Grid = styled.div`
   }
 `;
 
+const BottomGrid = styled.div`
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-areas: 
+    "a b"
+    "a c";
+    gap: 2em;
+
+    ${mediaQueries.mobile} {
+        grid-template-columns: repeat(1, 1fr);
+  }
+`;
+
+const Advertising = styled.div`
+  position: relative;
+  grid-area: a;
+`;
+const MIS = styled.div`
+  position: relative;
+  grid-area: b;
+`;
+const Advisors = styled.div`
+  position: relative;
+  grid-area: c;
+`;
+
 
 export default function Staff(props) {
     console.log(props.staff);
@@ -61,6 +89,28 @@ export default function Staff(props) {
                 );
             })}
             </Grid>
+            <BottomGrid>
+                <Advertising>
+                        <StaffItem
+                        section={props.staff_bottom[0].section}
+                        content={props.staff_bottom[0].content}
+                        />
+                </Advertising>
+                <MIS>
+                    <StaffItem
+                        section={props.staff_bottom[1].section}
+                        content={props.staff_bottom[1].content}
+                    />
+                </MIS>
+                <Advisors>
+                    <StaffItem
+                        section={props.staff_bottom[2].section}
+                        content={props.staff_bottom[2].content}
+                    />
+                </Advisors>
+                
+            
+            </BottomGrid>
         </Container>
         </>
       );
