@@ -89,7 +89,7 @@ export default function Staff(props) {
                 );
             })}
             </Grid>
-            <BottomGrid>
+            {/* <BottomGrid>
                 <Advertising>
                         <StaffItem
                         section={props.staff_bottom[0].section}
@@ -110,7 +110,7 @@ export default function Staff(props) {
                 </Advisors>
                 
             
-            </BottomGrid>
+            </BottomGrid> */}
         </Container>
         </>
       );
