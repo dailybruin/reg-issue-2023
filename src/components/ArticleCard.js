@@ -31,8 +31,7 @@ export default function ArticleCard(props){
     const OuterContainer = styled.div`
         position: relative;
         width: 100%;
-        height: fit-content;
-        min-height: 480px;
+        height: 480px;
         margin: auto;
         background-color: #C0DCCF;
         color: black;
@@ -55,7 +54,7 @@ export default function ArticleCard(props){
         height: 40%;
         width: 100%;
         display: block;
-        object-fit: scale-down;
+        object-fit: cover;
         border-bottom: 2.5px solid black;
         border-top: 2.5px solid black
     `;
@@ -63,7 +62,7 @@ export default function ArticleCard(props){
 
     const ByLine = styled.p`
         display: block;
-        font-size: 16px;
+        font-size: 0.8rem;
         font-weight: 200;
         text-align: center;
         color: black;
@@ -71,7 +70,7 @@ export default function ArticleCard(props){
         text-transform: uppercase;
 
         ${mediaQueries.mobile} {
-            font-size: 12px;
+            font-size: 1rem;
             padding: 1em;
         }
 
@@ -79,15 +78,15 @@ export default function ArticleCard(props){
 
     const Title = styled.a`
         display: block;
-        font-size: 20px;
+        font-size: 1.1rem;
         font-weight: 600;
         text-align: center;
-        padding: 0.8em;
+        padding: 1em 0.8em 0.6em 0.8em;
         color: black;
         font-family: 'Reem Kufi Ink', sans-serif;
 
         ${mediaQueries.mobile} {
-            font-size: 16px;
+            font-size: 1.3rem;
             margin-top: 1em;
         }
     `;

@@ -30,8 +30,7 @@ export default function EmptyCard(props){
     const OuterContainer = styled.div`
         position: relative;
         width: 100%;
-        height: fit-content;
-        min-height: 480px;
+        height: 480px;
         margin: auto;
         background-color: #C0DCCF;
         color: black;
