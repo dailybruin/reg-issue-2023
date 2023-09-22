@@ -37,6 +37,7 @@ function App() {
     background-image: url(${background});
     background-size: cover;
     height: fit-content;
+    overflow: hidden;
 
     ${mediaQueries.mobile} {
       background-image: url(${mobileBackgroud});

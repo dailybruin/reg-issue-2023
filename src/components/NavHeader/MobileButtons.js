@@ -42,11 +42,18 @@ const ButtonContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  
 `
 
-const MobileButtons = (props) => {
-  const [active, setActive] = useState(false)
+  const Image = styled.img`
+    width: 29px;
+    height: 29px;
+    margin-left: -10px;
+  `;
 
+const MobileButtons = (props) => {
+  const [active, setActive] = useState(false);
+  const marginLeft = "-10px";
   return (
     <ButtonContainer>
       <SquareButton
@@ -58,9 +65,11 @@ const MobileButtons = (props) => {
       >
         {
           !active ? (
-            <img src={menu} alt="menu" width= "29" height="29"/>
+            <img src={menu} alt="menu" width= "29" height="29" style={{ marginLeft: '-6px' }}/>
+            // <Image src={menu}></Image>
           ) : (
-            <img src={vert_menu} alt="menu" width= "29" height="29"/>
+            <img src={vert_menu} alt="menu" width= "29" height="29" style={{ marginLeft: '-6px' }}/>
+            // <Image src={menu}></Image>
           )
         }
       </SquareButton>
