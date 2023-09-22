@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { mediaQueries } from "../shared/config";
+import dice from "../images/dice.svg";
 
 const BlurbContainer = styled.div`
     display: flex;
@@ -47,6 +48,17 @@ const TextBottom = styled.div`
     }
 `;
 
+const Image = styled.img`
+    width: 200px;
+    margin-top: 5rem;
+    margin-left: 32rem;
+
+    ${mediaQueries.mobile} {
+        width: 180px;
+        margin-left: 16rem;
+    }
+`;
+
 export default function Blurb(props) {
     return (
       <BlurbContainer>
@@ -88,6 +100,7 @@ export default function Blurb(props) {
             &nbsp;•   Digital managing editor
             </span>  
         </TextBottom>
+        <Image src={dice}></Image>
       </BlurbContainer>
     );
   }
