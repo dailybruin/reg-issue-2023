@@ -3,11 +3,25 @@ import styled from "styled-components";
 import { mediaQueries } from "../shared/config";
 
 const Container = styled.div`
-    padding: 5em;
+    padding-top: 3em;
 `;
 
 const Box = styled.div`
-    border: 2px solid black; 
+
+    iframe {
+        height: 80vh;
+        max-height: 90vh;
+        width: 35vw;
+        border: none;
+        text-align: center;
+        display: block;
+        margin: auto;
+
+        ${mediaQueries.mobile} {
+            width: 80vw;
+            height: 90vh;
+        }
+    }
 `;
 
 
