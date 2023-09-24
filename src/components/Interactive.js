@@ -16,7 +16,8 @@ export default function Interactive() {
     return (
         <Container>
             <Box>
-                <iframe src=""></iframe>
+                <iframe src="https://wp.dailybruin.com/wp-content/themes/caeruleum/js/interactives/regissue-2023/spinwheel">
+                </iframe>
             </Box>
         </Container>
       );
